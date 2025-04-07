@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Nail Master</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Modal Login-->
+  <div class="modal fade" id="inicioModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Inicia sesión</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal SignIn-->
+  <div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Registro</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenido del sitio -->
+  <header class="bg-danger-subtle bg-transparent fixed-top  py-2">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/Logo-golden-nail-master.png" alt="Golden Nail Master Logo" width="180" class="img-fluid">
+          </a>
+        </div>
+        <div class="col-md-8">
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link fs-5" href="cursos.html">Cursos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fs-5" href="contactanos.html">Contáctanos</a>
+                  </li>
+                  <li class="nav-item">
+                    <button type="button" class="nav-link fs-5" data-bs-toggle="modal" data-bs-target="#registroModal">
+                        Registrate
+                    </button>
+                  </li>
+                  <li class="nav-item">
+                    <button type="button" class="nav-link fs-5" data-bs-toggle="modal" data-bs-target="#inicioModal">
+                        Iniciar Sesión
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container-fluid hero-section mb-5">
+      <div class="row">
+        <div class="col">
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/Carruceluno.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h2 class="display-4 fw-bold">Domina el arte de las uñas</h2>
+                  <p class="fs-5">Aprende con profesionales y destaca en el mundo de la belleza</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/Carruceldos.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h2 class="display-4 fw-bold">Técnicas profesionales</h2>
+                  <p class="fs-5">Diseños exclusivos para cada ocasión</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/Carruceltres.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h2 class="display-4 fw-bold">Tu futuro profesional</h2>
+                  <p class="fs-5">Comienza tu negocio con las mejores bases</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Primera sección-->
+    <div class="container py-5 content-section" id="intro">
+      <div class="row">
+        <div class="col">
+          <h1 class="text-center section-title">¡Despierta tu pasión por las uñas y conviértete en una profesional!</h1>
+          <div class="row mt-4">
+            <div class="col-md-6 mb-3">
+              <p class="text-center fs-5">¿Te encanta el mundo de la belleza y te apasiona el cuidado y diseño de las uñas? ¿Sueñas con convertirte en una experta en manicura y pedicura y comenzar tu propio negocio? ¡Entonces este curso es para ti!</p>
+            </div>
+            <div class="col-md-6">
+              <p class="text-center fs-5">En nuestro curso de uñas, te brindaremos las herramientas y conocimientos necesarios para dominar las técnicas más populares y convertirte en una verdadera profesional.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Segunda sección-->
+    <div class="container py-5 content-section" id="about">
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+          <img src="img/Celeste.png" alt="Instructora Celeste" class="img-fluid  instructor-image">
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col">
+              <h1 class="text-center section-title mb-4">¡Hola y bienvenidos!</h1>
+              <p class="text-center fs-5">Mi nombre es Celeste, y seré la encargada de guiarte en este emocionante viaje a través del mundo del arte en uñas. Con años de experiencia y pasión por las técnicas más innovadoras, he diseñado este curso pensando en ti, para que aprendas desde lo más básico hasta las técnicas más avanzadas de manera fácil y divertida.</p>
+              <p class="text-center fs-5">A lo largo del curso, te compartiré mis secretos, consejos y todo lo que necesitas para dominar el arte de las uñas. ¡Estoy muy emocionada de acompañarte en este proceso creativo y de aprendizaje!</p>
+              <p class="text-center fs-5">¡Prepárate para transformar tus habilidades y dar rienda suelta a tu creatividad!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Tercera sección-->
+    <div class="container py-5 content-section" id="benefits">
+      <div class="row">
+        <div class="col">
+          <h1 class="text-center section-title mb-4">¿Qué aprenderás en este curso?</h1>
+          <div class="row mt-4">
+            <div class="col-lg-6 mx-auto">
+              <ul class="feature-list">
+                <li class="mb-3 benefit-item">
+                  <span class="benefit-icon">✦</span> 
+                  <span>Dominar las técnicas básicas de manicura y pedicura: Aprenderás a realizar una limpieza profunda de las uñas, limar y dar forma, aplicar esmalte y decoraciones básicas.</span>
+                </li>
+                <li class="mb-3 benefit-item">
+                  <span class="benefit-icon">✦</span> 
+                  <span>Conocer las últimas tendencias en diseño de uñas: Te enseñaremos las técnicas más populares para crear diseños de uñas impactantes y modernos, utilizando diferentes materiales y herramientas.</span>
+                </li>
+                <li class="mb-3 benefit-item">
+                  <span class="benefit-icon">✦</span> 
+                  <span>Desarrollar tu creatividad: Fomentaremos tu creatividad para que puedas plasmar tu estilo único en cada diseño de uñas.</span>
+                </li>
+                <li class="mb-3 benefit-item">
+                  <span class="benefit-icon">✦</span> 
+                  <span>Aprender a gestionar tu negocio: Te brindaremos consejos y herramientas para que puedas iniciar y administrar tu propio negocio de uñas de manera exitosa.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Cuarta sección-->
+    <div class="container py-5 content-section" id="audience">
+      <div class="row">
+        <div class="col">
+          <h1 class="text-center section-title mb-4">¿A quién está dirigido este curso?</h1>
+          <div class="row mt-4">
+            <div class="col-lg-6 mx-auto">
+              <ul class="feature-list">
+                <li class="mb-3 audience-item">
+                  <span class="audience-icon">✦</span>
+                  <span>Apasionadas por la belleza y el cuidado de las uñas.</span>
+                </li>
+                <li class="mb-3 audience-item">
+                  <span class="audience-icon">✦</span>
+                  <span>Desean aprender las técnicas profesionales de manicura y pedicura.</span>
+                </li>
+                <li class="mb-3 audience-item">
+                  <span class="audience-icon">✦</span>
+                  <span>Buscan iniciar su propio negocio en el área de la belleza de las uñas.</span>
+                </li>
+                <li class="mb-3 audience-item">
+                  <span class="audience-icon">✦</span>
+                  <span>Quieren perfeccionar sus habilidades y conocimientos en el diseño de uñas.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Módulos del curso-->
+    <div class="container py-5 content-section" id="modules">
+      <div class="row">
+        <div class="col">
+          <h1 class="text-center section-title mb-5">Nuestros módulos</h1>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Tarjeta 1 -->
+        <div class="col-md-3 mb-4">
+          <a href="cursos.html" class="text-decoration-none card-link">
+            <div class="card course-card h-100">
+              <img src="img/Fundamentos-de-la-uña-modulo1.jpg" class="card-img-top" alt="Fundamentos de la uña">
+              <div class="card-body">
+                <h5 class="card-title text-center">Fundamentos de la uña</h5>
+                <p class="card-text">Conoce la anatomía y estructura de la uña natural para trabajar con profesionalidad.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- Tarjeta 2 -->
+        <div class="col-md-3 mb-4">
+          <a href="cursos.html" class="text-decoration-none card-link">
+            <div class="card course-card h-100">
+              <img src="img/Técnicas-de-limpieza-modulo-2.jpg" class="card-img-top" alt="Técnicas de limpieza">
+              <div class="card-body">
+                <h5 class="card-title text-center">Técnicas de limpieza y preparación</h5>
+                <p class="card-text">Aprende las técnicas correctas para preparar la uña natural antes de cualquier tratamiento.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- Tarjeta 3 -->
+        <div class="col-md-3 mb-4">
+          <a href="cursos.html" class="text-decoration-none card-link">
+            <div class="card course-card h-100">
+              <img src="img/Sistemas-artificiales-modulo-3.jpg" class="card-img-top" alt="Sistemas artificiales">
+              <div class="card-body">
+                <h5 class="card-title text-center">Sistemas artificiales</h5>
+                <p class="card-text">Domina las técnicas de uñas acrílicas, gel y otras extensiones artificiales.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- Tarjeta 4 -->
+        <div class="col-md-3 mb-4">
+          <a href="cursos.html" class="text-decoration-none card-link">
+            <div class="card course-card h-100">
+              <img src="img/Esmaltado-semipermanente-modulo-4.jpg" class="card-img-top" alt="Esmaltado semipermanente">
+              <div class="card-body">
+                <h5 class="card-title text-center">Esmaltado semipermanente</h5>
+                <p class="card-text">Conoce las técnicas de aplicación de esmaltes semipermanentes para resultados duraderos.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!--Pie de pagina-->
+  <footer class="py-4 bg-danger-subtle">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <img src="img/Logo-golden-nail-master.png" alt="Golden Nail Master Logo" width="120" class="mb-3">
+          <p>Formando profesionales en el arte de las uñas desde 2020.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Enlaces rápidos</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-decoration-none text-dark">Inicio</a></li>
+            <li><a href="cursos.html" class="text-decoration-none text-dark">Cursos</a></li>
+            <li><a href="contactanos.html" class="text-decoration-none text-dark">Contáctanos</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Síguenos</h5>
+          <div class="social-links">
+            <a href="https://www.instagram.com/" class="text-dark me-3"><i class="bi bi-instagram fs-3"></i></a>
+            <a href="https://www.whatsapp.com/" class="text-dark me-3"><i class="bi bi-whatsapp fs-3"></i></a>
+            <a href="https://co.pinterest.com/" class="text-dark me-3"><i class="bi bi-pinterest fs-3"></i></a>
+            <a href="https://www.youtube.com/" class="text-dark"><i class="bi bi-youtube fs-3"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col text-center">
+          <p class="mb-0">&copy; 2024 Golden Nail Master. Todos los derechos reservados</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn" class="back-to-top"><i class="bi bi-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+</html>
