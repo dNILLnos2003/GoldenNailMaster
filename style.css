@@ -3,7 +3,7 @@
 
 body {
     background: rgb(255,229,236);
-background: linear-gradient(0deg, rgba(255,229,236,1) 40%, rgba(255,175,204,1) 100%);
+    background-color: white;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
