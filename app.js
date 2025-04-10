@@ -6,32 +6,12 @@
  * 2. Carrusel mejorado
  * 3. Efectos en tarjetas de cursos
  * 4. Validación de formularios
- * 5. Modo oscuro/claro (theme switcher)
  */
 
 // =======================================
 // 1. SCROLL Y ANIMACIONES
 // =======================================
-document.addEventListener('DOMContentLoaded', function() {
-    // Botón de regresar arriba
-    const backToTopButton = document.getElementById('backToTopBtn');
-    
-    // Función para mostrar/ocultar el botón según la posición del scroll
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            backToTopButton.style.display = 'flex';
-        } else {
-            backToTopButton.style.display = 'none';
-        }
-    });
-    
-    // Evento para regresar arriba cuando se hace clic en el botón
-    backToTopButton.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
+
     
     // Animación al hacer scroll para las secciones
     const contentSections = document.querySelectorAll('.content-section');
@@ -60,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         section.style.opacity = '0';
         observer.observe(section);
     });
-});
+
 
 // =======================================
 // 2. CARRUSEL MEJORADO
@@ -288,134 +268,4 @@ document.addEventListener('DOMContentLoaded', function() {
         
         return isValid;
     }
-});
-
-// =======================================
-// 5. MODO OSCURO/CLARO (THEME SWITCHER)
-// =======================================
-document.addEventListener('DOMContentLoaded', function() {
-    // Crear botón para cambiar tema
-    const createThemeButton = () => {
-        const footer = document.querySelector('footer');
-        if (!footer) return;
-        
-        // Crear el botón y agregarlo al DOM
-        const themeBtn = document.createElement('button');
-        themeBtn.id = 'themeToggleBtn';
-        themeBtn.className = 'theme-toggle';
-        themeBtn.innerHTML = '<i class="bi bi-moon-fill"></i>';
-        themeBtn.setAttribute('title', 'Cambiar tema');
-        document.body.appendChild(themeBtn);
-        
-        // Estilos para el botón
-        themeBtn.style.position = 'fixed';
-        themeBtn.style.bottom = '20px';
-        themeBtn.style.left = '20px';
-        themeBtn.style.width = '50px';
-        themeBtn.style.height = '50px';
-        themeBtn.style.borderRadius = '50%';
-        themeBtn.style.backgroundColor = '#d9534f';
-        themeBtn.style.color = 'white';
-        themeBtn.style.border = 'none';
-        themeBtn.style.boxShadow = '0 3px 10px rgba(0, 0, 0, 0.2)';
-        themeBtn.style.display = 'flex';
-        themeBtn.style.justifyContent = 'center';
-        themeBtn.style.alignItems = 'center';
-        themeBtn.style.cursor = 'pointer';
-        themeBtn.style.transition = 'background-color 0.3s';
-        themeBtn.style.zIndex = '1000';
-        
-        // Verificar si hay preferencia guardada
-        const currentTheme = localStorage.getItem('theme');
-        if (currentTheme === 'dark') {
-            document.body.classList.add('dark-theme');
-            themeBtn.innerHTML = '<i class="bi bi-sun-fill"></i>';
-        }
-        
-        // Agregar evento al botón
-        themeBtn.addEventListener('click', toggleTheme);
-    }
-    
-    // Función para alternar entre temas
-    const toggleTheme = () => {
-        const themeBtn = document.getElementById('themeToggleBtn');
-        const body = document.body;
-        
-        // Cambiar tema
-        if (body.classList.contains('dark-theme')) {
-            body.classList.remove('dark-theme');
-            themeBtn.innerHTML = '<i class="bi bi-moon-fill"></i>';
-            localStorage.setItem('theme', 'light');
-        } else {
-            body.classList.add('dark-theme');
-            themeBtn.innerHTML = '<i class="bi bi-sun-fill"></i>';
-            localStorage.setItem('theme', 'dark');
-        }
-    }
-    
-    // Agregar estilos CSS para el tema oscuro
-    const addDarkThemeStyles = () => {
-        const styleElement = document.createElement('style');
-        styleElement.id = 'darkThemeStyles';
-        
-        styleElement.textContent = `
-            .dark-theme {
-                background-image: url(./img/fondo-dark.jpg);
-                color: #f0f0f0;
-            }
-            
-            .dark-theme .content-section {
-                background-color: rgba(30, 30, 40, 0.9);
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            }
-            
-            .dark-theme .navbar,
-            .dark-theme header,
-            .dark-theme footer {
-                background-color: #1e1e28 !important;
-                color: #f0f0f0;
-            }
-            
-            .dark-theme .card {
-                background-color: #2a2a36;
-                color: #f0f0f0;
-            }
-            
-            .dark-theme .nav-link,
-            .dark-theme footer a {
-                color: #f0f0f0 !important;
-            }
-            
-            .dark-theme .nav-link:hover {
-                color: #ff6b6b !important;
-            }
-            
-            .dark-theme .benefit-item, 
-            .dark-theme .audience-item {
-                background-color: rgba(42, 42, 54, 0.7);
-            }
-            
-            .dark-theme .modal-content {
-                background-color: #2a2a36;
-                color: #f0f0f0;
-            }
-            
-            .dark-theme .form-control {
-                background-color: #1e1e28;
-                color: #f0f0f0;
-                border-color: #444;
-            }
-            
-            .dark-theme .form-control:focus {
-                background-color: #2a2a36;
-                color: #f0f0f0;
-            }
-        `;
-        
-        document.head.appendChild(styleElement);
-    }
-    
-    // Inicializar
-    addDarkThemeStyles();
-    createThemeButton();
 });
